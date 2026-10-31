@@ -1,0 +1,11 @@
+# Tasks
+- [x] Send the human_takeover webhook event, including the claiming attendant's name, only after successful assignment; 22 focused tests passed, including stale claims, unchanged assignments, and webhook failures; build OK.
+- [x] Record and display persistent, real-time internal notices when a user assumes a conversation; 12 focused tests and rollback-only assignment checks passed, with no WhatsApp message creation or unread changes.
+- [x] Persist read acknowledgements and clear unread counts when a session closes; five regression tests and rollback-only database lifecycle tests passed.
+- [x] Check RLS/grants and fix the global message limit that omits recent sessions.
+- [x] Replace session badge identifiers with date and time and make mobile conversations accessible.
+- [x] Verify public sign-in screens, successful build, and required package update.
+- [x] Add period filter (Hoje, Ontem, Últimos 7 dias, Todas) and "Copiar Telefone" per conversation.
+- [x] Show a counter of conversations in the selected period below the period presets.
+- [x] Make the contact list wider by default and resizable by dragging its right edge (double-click resets; width remembered per browser).
+- [ ] Verify conversations, unread badges, assignment notices, and takeover webhook delivery after sign-in: blocked by external Supabase without an available authenticated test session; public sign-in opens without runtime errors, and published changes require publishing Update.
