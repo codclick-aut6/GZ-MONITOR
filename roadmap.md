@@ -1,0 +1,22 @@
+# Tasks
+- [x] Add configurable communication API Key to super-admin System settings with masked replacement input, no browser read-back and service-only n8n read.
+- [x] Build GoodZap management page at /admin with eight general sections and super-admin system settings; preserve attendance controls.
+- [x] Add service-only buscar_configuracoes_goodzap aggregate RPC; authenticated HTTP, exclusive activation and rollback-only database checks passed; 32 focused Vitest tests passed.
+- [ ] Verify GoodZap forms and communication-key replacement after sign-in: external unmanaged Supabase provides no authenticated browser session; public /admin redirects to /auth without runtime errors.
+- [x] Correct unified invitation signup with exact-token validation and self-only atomic role assignment; 61 Vitest tests and rollback-only database checks passed for all four roles, single-use and unauthorized access; build OK and invalid-token browser submission rejected without runtime errors; no temporary data remains.
+- [ ] Update the separate GoodZap Agent Hub signup to use secure token validation instead of anonymous table reads and redeem after sign-in; blocked by read-only cross-project access, requiring its project chat; implementation guidance is in supabase/agent-hub-signup.md.
+- [ ] Verify successful invitation signup and role read-back in the signed-in UI: blocked by the external unmanaged Supabase connection without an authenticated browser test session; verified public rejection flow and rollback-only database role assignment instead.
+- [x] Create 23 Agent Hub business tables and four auxiliary functions additively; preserve existing panel auth, token claims, roles and WhatsApp lifecycle; do not copy provider credentials or activate campaign delivery.
+- [x] Validate target grants, RLS, 23 update triggers and three scheduling triggers; 51 Vitest tests and rollback-only database campaign, metric and actual service/team access checks passed; no temporary data remains.
+- [ ] Compare exact legacy source types, defaults, constraints and missing functions: waiting for a schema-only export from GoodZap Agent Hub, since its snapshot lacks the original table definitions.
+- [ ] Import Agent Hub records and switch n8n: waiting for CSV exports without credentials from the source project's chat and the user's n8n credential change after verification.
+- [x] Send the human_takeover webhook event, including the claiming attendant's name, only after successful assignment; 22 focused tests passed, including stale claims, unchanged assignments, and webhook failures; build OK.
+- [x] Record and display persistent, real-time internal notices when a user assumes a conversation; 12 focused tests and rollback-only assignment checks passed, with no WhatsApp message creation or unread changes.
+- [x] Persist read acknowledgements and clear unread counts when a session closes; five regression tests and rollback-only database lifecycle tests passed.
+- [x] Check RLS/grants and fix the global message limit that omits recent sessions.
+- [x] Replace session badge identifiers with date and time and make mobile conversations accessible.
+- [x] Verify public sign-in screens, successful build, and required package update.
+- [x] Add period filter (Hoje, Ontem, Últimos 7 dias, Todas) and "Copiar Telefone" per conversation.
+- [x] Show a counter of conversations in the selected period below the period presets.
+- [x] Make the contact list wider by default and resizable by dragging its right edge (double-click resets; width remembered per browser).
+- [ ] Verify conversations, unread badges, assignment notices, and takeover webhook delivery after sign-in: blocked by external Supabase without an available authenticated test session; public sign-in opens without runtime errors, and published changes require publishing Update.
