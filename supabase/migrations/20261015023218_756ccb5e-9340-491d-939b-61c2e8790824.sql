@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.increment_unread_count() FROM PUBLIC, anon, authenticated;

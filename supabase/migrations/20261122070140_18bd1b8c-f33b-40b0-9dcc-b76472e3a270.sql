@@ -1,0 +1,1 @@
+ALTER TABLE public.promocoes_goodzap ALTER COLUMN validade TYPE text USING to_char(validade, 'DD/MM/YYYY');
